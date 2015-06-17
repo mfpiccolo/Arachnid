@@ -104,7 +104,7 @@ class Arachnid
 				parsed_domain.domain + '.' + parsed_domain.public_suffix
 			end
 		rescue NoMethodError, Addressable::URI::InvalidURIError => e
-			puts "URL Parsing Exception (#{url}): #{e}"
+			puts "URL Parsing Exception (#{url}): #{e}" if @debug == true
 			return nil
 		end
 	end
